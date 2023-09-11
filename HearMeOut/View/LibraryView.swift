@@ -12,8 +12,9 @@ import XMLCoder
 struct LibraryView: View {
     @State private var openFile = false
     @State var showingAlert = false
-    @StateObject private var viewModel = ScoreStore()
     @State private var path = NavigationPath()
+    
+    @StateObject private var viewModel = ScoreStore()
     
     var body: some View {
         NavigationStack(path: $path) {

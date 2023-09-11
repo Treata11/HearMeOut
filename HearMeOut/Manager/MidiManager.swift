@@ -11,7 +11,9 @@ import AVFoundation
 class MidiManager {
     static let shared = MidiManager()
     
-    private let soundBankURL: URL = Bundle.main.url(forResource: "YDP-GrandPiano-20160804" , withExtension: "sf2")!
+//    private let soundBankURL: URL = Bundle.main.url(forResource: "YDP-GrandPiano-20160804" , withExtension: "sf2")!
+    private let soundBankURL: URL = Bundle.main.url(forResource: "Full Grand Piano" , withExtension: "sf2")!
+//    private let soundBankURL: URL = Bundle.main.url(forResource: "GeneralUser GS MuseScore v1.442" , withExtension: "sf2")!
     
     private var midiPlayer: AVMIDIPlayer!
     

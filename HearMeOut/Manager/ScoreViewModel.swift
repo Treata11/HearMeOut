@@ -5,12 +5,10 @@
 //  Created by Nicola Rigoni on 19/01/23.
 //
 
-import Foundation
 import MidiParser
-import AVFoundation
-import AVFAudio
+//import AVFAudio
 import Combine
-import SwiftUI
+import AudioToolbox
 
 class ScoreViewModel: ObservableObject {
     
@@ -85,7 +83,7 @@ class ScoreViewModel: ObservableObject {
         $originalScore
             .combineLatest($staffDictionary)
             .map(filterByStaff)
-            .sink {[weak self] returnedScore in
+            .sink { [weak self] returnedScore in
                 self?.musicScore = returnedScore
 //                self?.generateStafAccessibility()
                 print("ESEGUO SINK HOME VM")

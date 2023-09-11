@@ -16,15 +16,20 @@ enum FocusModel: Hashable {
 struct ScoreView: View {
     @State private var isNavigated: Bool = false
     @State private var isActive: Bool = false
+    
     @StateObject private var vm: ScoreViewModel = ScoreViewModel.shared
+    
     @State private var clef: [ClefScore] = []
     @State private var beatType: BeatType = .none
     @State private var focusArray: [FocusModel] = [FocusModel.note(id: 0), FocusModel.note(id: 1)]
     @State private var array: [String] = ["uno", "due"]
+    
     @AccessibilityFocusState var focus: FocusModel?
+    
     @State private var indexStaff: Int = 0
     @State private var showRecording: Bool = false
-    let fileName: String
+    
+    let fileName: String?
     
 //    let scoreData : Score
     private let columns: [GridItem] = [
@@ -37,7 +42,7 @@ struct ScoreView: View {
     ]
     let url: URL
     
-    init(url: URL, fileName: String) {
+    init(url: URL, fileName: String? = nil) {
 //        self._vm = StateObject(wrappedValue: ScoreViewModel(url: url))
 //        self.scoreData = ScoreStore().retrieveScore(path: url)
         self.url = url
@@ -69,7 +74,7 @@ struct ScoreView: View {
             }
             .padding(.bottom, 60)
             .sheet(isPresented: $showRecording) {
-                RecordingView(fileName: fileName)
+                RecordingView(fileName: fileName ?? "")
             }
 
             PreviewsNextButton(vm: vm)
@@ -210,7 +215,11 @@ struct ScoreView: View {
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            ScoreView(url: Bundle.main.url(forResource: "MozartPianoSonata" , withExtension: "musicxml")!, fileName: "")
+//            ScoreView(url: Bundle.main.url(forResource: "MozartPianoSonata" , withExtension: "musicxml")!)
+            ScoreView(url: Bundle.main.url(forResource: "Schubert" , withExtension: "musicxml")!)
+//            ScoreView(url: Bundle.main.url(forResource: "Beethoven_-_Fur_Elise_Bagatelle_No._25_WoO_59-Piano" , withExtension: "xml")!)
+//            ScoreView(url: Bundle.main.url(forResource: "Beethoven__Piano_Sonata_No._14__Moonlight" , withExtension: "mxl")!)
+            /// MXL isn't supported!
         }
     }
 }
@@ -219,6 +228,7 @@ struct MyContent: View {
     let title: String
     let image: String
     let notes: String
+    
     var body: some View {
         VStack{
             Text(title)

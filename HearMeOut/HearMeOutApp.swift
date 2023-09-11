@@ -11,19 +11,19 @@ import AVFoundation
 @main
 struct HearMeOutApp: App {
     init() {
-#if os(iOS)
+//#if os(iOS)
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch let err {
-            print(err)
+            print(err,"\n\n",err.localizedDescription)
         }
-#endif
+//#endif
     }
     var body: some Scene {
         WindowGroup {
             LibraryView()
-            //            ScoreView(url:Bundle.main.url(forResource: "MozartPianoSonata" , withExtension: "musicxml")!)
+//            ScoreView(url:Bundle.main.url(forResource: "MozartPianoSonata" , withExtension: "musicxml")!, fileName: "")
         }
     }
 }
