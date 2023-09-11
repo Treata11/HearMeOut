@@ -1,0 +1,97 @@
+"Add" = "Importa";
+
+"BPM" = "BPM";
+
+"Choose a staff" = "Scegli Una mano";
+
+"Choose a tempo" = "Scegli un tempo";
+
+"Done" = "Fatto";
+
+"Cancel" = "Cancella";
+
+"Metronomo" = "Metronomo";
+
+"Reading by" = "Lettura per";
+
+"Reproduce by" = "Riproduzione per";
+
+"Settings" = "Impostazioni";
+
+"Songs, Composer..." = "Canzoni, Compositori...";
+
+"Bar" = "Battuta";
+
+"Line" = "Linea";
+
+"All" = "Intero Spartito";
+
+"Single note" = "Nota singola";
+
+"Beat" = "Tempo";
+
+"Select staff" = "Scegli pentagramma";
+
+"Staff 1" = "Primo pentagramma";
+
+"Staff 2" = "Secondo pentagramma";
+
+"Scores" = "Spartiti";
+
+"Next" = "Prossimo";
+
+"Previous" = "Precedente";
+
+"Attention: you have already added this file" = "Attenzine: hai già aggiunto questo file";
+
+"Key," = "Chiave,";
+
+"Chord," = "Accordo,";
+
+"rest" = "pausa";
+
+"sharp" = "diesis";
+
+"flet" = "bemolle";
+
+"end chord" = "fine accordo";
+
+"A" = "LA";
+
+"B" = "SI";
+
+"C" = "DO";
+
+"D" = "RE";
+
+"E" = "MI";
+
+"F" = "FA";
+
+"G" = "SOL";
+
+"Okay, next measure performed" = "Okay, prossima battuta";
+
+"Okay, previous measure performed" = "Okay, battuta precedente";
+
+"Next" = "Prossima";
+
+"Previous" = "Precedente";
+
+"oneQuarter" = "un, quarto";
+
+"twoQuarter" = "due, quarti";
+
+"threeQuarter" = "tre, quarti";
+
+"fourQaurter" = "quattro, quarti";
+
+"threeEight" = "tre, ottavi";
+
+"sixtEight" = "sei, ottavi";
+
+"nineEight" = "nove, ottavi";
+
+"twelveEight" = "dodici, ottavi";
+
+"Your recordings" = "Le tue registrazioni";
