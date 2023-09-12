@@ -20,8 +20,7 @@ class Metronome: ObservableObject {
     }
     
     enum Italians: String, CaseIterable {
-        case nullo = "NULLO"
-/// ----------------------------------------
+///        case nullo = "NULLO"
         case larghissimo = "LARGHISSIMO"
         case lento = "LENTO"
         case larghetto = "LARGHETTO"
@@ -38,29 +37,26 @@ class Metronome: ObservableObject {
         case vivace = "VIVACE"
         case presto = "PRESTO"
         case prestissimo = "PRESTISSIMO"
-/// ----------------------------------------
-        case illimitato = "ILLIMITATO"
+///        case illimitato = "ILLIMITATO"
 
-        func description(with BPM: Float) -> Self {
-            if BPM < 20 { return .nullo }
-            else if 20.0 <= BPM && BPM < 30.0  { return .larghissimo }
-            else if 30 <= BPM && BPM < 53 { return .lento }
-            else if 53 <= BPM && BPM < 66 { return .larghetto }
-            else if 66 <= BPM && BPM < 76 { return .andante }
-            else if 76 <= BPM && BPM < 80 { return .sostenuto }
-            else if 80 <= BPM && BPM < 84 { return .comodo }
-            else if 84 <= BPM && BPM < 88 { return .maestoso }
-            else if 88 <= BPM && BPM < 108 { return .moderato }
+        func description(by BPM: Float) -> Self {
+            if BPM.isBetween(20, and: 30) { return .larghissimo }
+            else if BPM.isBetween(30, and: 53) { return .lento }
+            else if BPM.isBetween(53, and: 66) { return .larghetto }
+            else if BPM.isBetween(66, and: 76) { return .andante }
+            else if BPM.isBetween(76, and: 80) { return .sostenuto }
+            else if BPM.isBetween(80, and: 84) { return .comodo }
+            else if BPM.isBetween(84, and: 88) { return .maestoso }
+            else if BPM.isBetween(88, and: 108) { return .moderato }
 /// ----------------------------------------------------------------------------
-            else if 108 <= BPM && BPM < 120 { return .allegretto }
-            else if 120 <= BPM && BPM < 132 { return .animato }
-            else if 132 <= BPM && BPM < 144 { return .allegro }
-            else if 144 <= BPM && BPM < 152 { return .allegroAssai }
-            else if 152 <= BPM && BPM < 160 { return .allegroVivace }
-            else if 160 <= BPM && BPM < 184 { return .vivace }
-            else if 184 <= BPM && BPM < 201 { return .presto }
-            else if 201 <= BPM && BPM < 240 { return .prestissimo }
-            else { return .illimitato }
+            else if BPM.isBetween(108, and: 120) { return .allegretto }
+            else if BPM.isBetween(120, and: 132) { return .animato }
+            else if BPM.isBetween(132, and: 144) { return .allegro }
+            else if BPM.isBetween(144, and: 152) { return .allegroAssai }
+            else if BPM.isBetween(152, and: 160) { return .allegroVivace }
+            else if BPM.isBetween(160, and: 184) { return .vivace }
+            else if BPM.isBetween(184, and: 201) { return .presto }
+            else { return .prestissimo } /// else if 201 <= BPM && BPM < 240
         }
     }
     
@@ -127,3 +123,12 @@ class Metronome: ObservableObject {
         onTick?(nextTick)
     }
 }
+
+// TODO: Add to Utility Extensions
+
+extension Float {
+    func isBetween(_ lowerBound: Self, and upperBound: Self) -> Bool {
+        return lowerBound <= self && self < upperBound
+    }
+}
+
