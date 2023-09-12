@@ -217,9 +217,6 @@ struct ScoreView_Previews: PreviewProvider {
         NavigationStack {
 //            ScoreView(url: Bundle.main.url(forResource: "MozartPianoSonata" , withExtension: "musicxml")!)
             ScoreView(url: Bundle.main.url(forResource: "Schubert" , withExtension: "musicxml")!)
-//            ScoreView(url: Bundle.main.url(forResource: "Beethoven_-_Fur_Elise_Bagatelle_No._25_WoO_59-Piano" , withExtension: "xml")!)
-//            ScoreView(url: Bundle.main.url(forResource: "Beethoven__Piano_Sonata_No._14__Moonlight" , withExtension: "mxl")!)
-            /// MXL isn't supported!
         }
     }
 }

@@ -5,7 +5,6 @@
 //  Created by Nicola Rigoni on 04/03/23.
 //
 
-import Foundation
 import AVFoundation
 
 class MidiManager {
@@ -26,6 +25,10 @@ class MidiManager {
             midiPlayer.prepareToPlay()
             midiPlayer.play() {
                 completion(true)
+                
+                if let soundBank = self.loadSoundBank(soundBankURL: self.soundBankURL) {
+                    print("\(soundBank) loaded successfully")
+                }
             }
         } catch {
             print("could not create MIDI player")
@@ -35,5 +38,16 @@ class MidiManager {
     
     func stopMidi() {
         midiPlayer.stop()
+    }
+    
+    private func loadSoundBank(soundBankURL: URL) -> AVAudioUnitSampler? {
+        do {
+            let sampler = AVAudioUnitSampler()
+            try sampler.loadInstrument(at: soundBankURL)
+            return sampler
+        } catch {
+            print("Failed to load sound bank: \(error)")
+            return nil
+        }
     }
 }

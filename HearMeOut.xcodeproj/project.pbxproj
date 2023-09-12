@@ -147,7 +147,6 @@
 		6140619E2AAEF4BE00980D2C /* GeneralUser GS MuseScore v1.442.sf2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "GeneralUser GS MuseScore v1.442.sf2"; sourceTree = "<group>"; };
 		6140619F2AAEF4BE00980D2C /* Full Grand Piano.sf2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Full Grand Piano.sf2"; sourceTree = "<group>"; };
 		614061A92AAF2E3300980D2C /* Schubert.musicxml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Schubert.musicxml; sourceTree = "<group>"; };
-		614061AD2AAF4B8D00980D2C /* Beethoven_-_Fur_Elise_Bagatelle_No._25_WoO_59-Piano.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Beethoven_-_Fur_Elise_Bagatelle_No._25_WoO_59-Piano.xml"; sourceTree = "<group>"; };
 		614061AF2AAF4EA400980D2C /* Beethoven__Piano_Sonata_No._14__Moonlight.mxl */ = {isa = PBXFileReference; lastKnownFileType = file; path = Beethoven__Piano_Sonata_No._14__Moonlight.mxl; sourceTree = "<group>"; };
 		7D71C20829B1EF020088BA8E /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = Languages/it.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +187,6 @@
 				0E7F164629ACC2E60067AEA2 /* HelloWorld.musicxml */,
 				0E7F164529ACC2E60067AEA2 /* MozaChloSample.musicxml */,
 				614061A92AAF2E3300980D2C /* Schubert.musicxml */,
-				614061AD2AAF4B8D00980D2C /* Beethoven_-_Fur_Elise_Bagatelle_No._25_WoO_59-Piano.xml */,
 				614061AF2AAF4EA400980D2C /* Beethoven__Piano_Sonata_No._14__Moonlight.mxl */,
 				0E7F164029ACC2E60067AEA2 /* MozartPianoSonata.musicxml */,
 				0E7F164329ACC2E60067AEA2 /* test5.musicxml */,
